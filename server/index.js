@@ -10,7 +10,7 @@ const app = express();
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
-
+app.use("/posts", postsRoute);
 const CONNECTION_URL =
   "mongodb+srv://imjord:imjord123@cluster0.wgfs2.mongodb.net/memoriesDatabase?retryWrites=true&w=majority";
 const PORT = process.env.PORT || 5000;
@@ -27,5 +27,3 @@ mongoose
   });
 
 // routes
-
-app.use("/posts", postsRoute);

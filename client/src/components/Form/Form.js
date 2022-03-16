@@ -26,7 +26,7 @@ export default function Form() {
     <Paper className={classes.paper}>
       <form
         autoComplete="off"
-        novalidate
+        noValidate
         className={`${classes.root} ${classes.form}`}
         onSubmit={handleSubmit}
       >
@@ -44,7 +44,7 @@ export default function Form() {
         <TextField
           name="title"
           variant="outlined"
-          label="title"
+          label="Title"
           fullWidth
           value={postData.title}
           onChange={(e) => setPostData({ ...postData, title: e.target.value })}
@@ -52,7 +52,7 @@ export default function Form() {
         <TextField
           name="message"
           variant="outlined"
-          label="message"
+          label="Message"
           fullWidth
           value={postData.message}
           onChange={(e) =>
@@ -62,7 +62,7 @@ export default function Form() {
         <TextField
           name="tags"
           variant="outlined"
-          label="tags"
+          label="Tags"
           fullWidth
           value={postData.tags}
           onChange={(e) => setPostData({ ...postData, tags: e.target.value })}
